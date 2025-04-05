@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit & Play Roulette</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        .roulette { margin: 20px auto; width: 300px; height: 300px; border: 5px solid black; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; background: red; color: white; }
+        button { padding: 10px 20px; margin-top: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>Deposit Credits</h2>
+    <form action="deposit.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="amount">Select Deposit Amount:</label>
+        <select id="amount" name="amount" required>
+            <option value="1">1 Credit</option>
+            <option value="2">2 Credits</option>
+            <option value="4">4 Credits</option>
+            <option value="5">5 Credits</option>
+            <option value="6">6 Credits</option>
+            <option value="8">8 Credits</option>
+            <option value="9">9 Credits</option>
+            <option value="10">10 Credits</option>
+            <option value="13">13 Credits</option>
+            <option value="15">15 Credits</option>
+            <option value="19">19 Credits</option>
+            <option value="21">21 Credits</option>
+        </select>
+        <br>
+        <button type="submit">Deposit</button>
+    </form>
+
+    <h2>Play Roulette</h2>
+    <div class="roulette" id="rouletteDisplay">🎰</div>
+    <button onclick="playRoulette()">Spin</button>
+    <p id="rouletteResult"></p>
+
+    <script>
+        function playRoulette() {
+            let numbers = [1, 2, 4, 5, 6, 8, 9, 10, 13, 15, 19, 21];
+            let randomIndex = Math.floor(Math.random() * numbers.length);
+            let selectedNumber = numbers[randomIndex];
+
+            document.getElementById("rouletteDisplay").innerText = selectedNumber;
+            document.getElementById("rouletteResult").innerText = "Roulette Stopped at: " + selectedNumber + "!";
+        }
+    </script>
+</body>
+</html>
