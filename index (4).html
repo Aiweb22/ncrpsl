@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-adsense-account" content="ca-pub-3143163307582112">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphaclod Hosting - Premium Game Servers</title>
+    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/995hhczC/IMG-20250723-WA0021-modified.png">
+    <style>
+        :root {
+            --primary-dark: #0A0E17; /* Deep blue-black */
+            --primary-blue: #1A73E8; /* Vibrant blue */
+            --accent-green: #0F9D58; /* Google green */
+            --light-bg: #F8F9FA;
+            --text-light: #FFFFFF;
+            --text-dark: #212121;
+            --card-bg: #121D2F;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), #0D1525);
+            color: var(--text-light);
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, var(--primary-blue), var(--accent-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            color: #A0AEC0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--primary-dark);
+            padding: 1rem 0;
+            border-bottom: 2px solid var(--primary-blue);
+        }
+        
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--accent-green);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-green);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(10, 14, 23, 0.9), rgba(10, 14, 23, 0.9)), 
+                        url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--primary-blue), var(--accent-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-light);
+            width: 100%;
+        }
+        
+        .game-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 4rem 1rem;
+            gap: 2rem;
+            background-color: var(--primary-dark);
+            color: white;
+        }
+        
+        .game-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            width: 300px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 3px solid var(--primary-blue);
+        }
+        
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            border-top-color: var(--accent-green);
+        }
+        
+        .game-icon {
+            height: 140px;
+            background: linear-gradient(135deg, var(--primary-dark), #121D2F);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+        
+        .game-info {
+            padding: 1.8rem;
+            color: white;
+        }
+        
+        .game-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        
+        .game-info p {
+            color: #CBD5E0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            margin: 1.5rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary-blue), var(--accent-green));
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(26, 115, 232, 0.3);
+        }
+        
+        .features {
+            padding: 5rem 2rem;
+            background-color: var(--primary-dark);
+            color: white;
+            text-align: center;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .feature-card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            border-left: 3px solid var(--accent-green);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-blue);
+        }
+        
+        .feature-card p {
+            color: #CBD5E0;
+        }
+        
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+        }
+        
+        .footer-column h3 {
+            color: var(--accent-green);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-blue);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-column li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column a {
+            color: #CBD5E0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column a:hover {
+            color: var(--accent-green);
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #A0AEC0;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">Alphaclod HOSTING</div>
+        <div class="tagline">Next-Level Game Server Performance</div>
+    </header>
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#games">Game Servers</a>
+        <a href="#features">Features</a>
+        <a href="#locations">Locations</a>
+        <a href="#support">Support</a>
+    </nav>
+    
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>GAME SERVER HOSTING REIMAGINED</h1>
+            <p>High-performance hosting for FiveM, Minecraft, MTA, SAMP, Rust and TeamSpeak3 with 99.9% uptime guarantee</p>
+            <a href="#games" class="btn">View Game Servers</a>
+        </div>
+    </section>
+    
+    <section class="game-cards" id="games">
+        <h2 class="section-title">OUR GAME SERVERS</h2>
+        
+        <div class="game-card">
+            <div class="game-icon">🎮</div>
+            <div class="game-info">
+                <h3>FiveM Hosting</h3>
+                <p>Optimized for GTA V RP with one-click mod installation</p>
+                <div class="price">$5.99/mo</div>
+                <a href="https://web.alphaclodsolution.xyz" class="btn">Get Started</a>
+            </div>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-icon">⛏️</div>
+            <div class="game-info">
+                <h3>Minecraft Hosting</h3>
+                <p>Supports Java & Bedrock, modpacks, and custom jars</p>
+                <div class="price">$3.99/mo</div>
+                <a href="https://web.alphaclodsolution.xyz" class="btn">Get Started</a>
+            </div>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-icon">🚗</div>
+            <div class="game-info">
+                <h3>MTA/SAMP Hosting</h3>
+                <p>Low latency servers for San Andreas multiplayer</p>
+                <div class="price">$3.49/mo</div>
+                <a href="https://web.alphaclodsolution.xyz" class="btn">Get Started</a>
+            </div>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-icon">🦀</div>
+            <div class="game-info">
+                <h3>Rust Hosting</h3>
+                <p>High-performance Rust servers with Oxide support</p>
+                <div class="price">$2.76/mo</div>
+                <a href="https://web.alphaclodsolution.xyz" class="btn">Get Started</a>
+            </div>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-icon">🎙️</div>
+            <div class="game-info">
+                <h3>TeamSpeak3 Hosting</h3>
+                <p>Crystal clear voice chat for your gaming community</p>
+                <div class="price">$1.99/mo</div>
+                <a href="https://web.alphaclodsolution.xyz" class="btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features" id="features">
+        <h2 class="section-title">WHY CHOOSE ALPHACLOD HOSTING?</h2>
+        <p>We provide enterprise-grade hosting solutions tailored specifically for gaming communities</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Blazing Fast SSD</h3>
+                <p>NVMe SSD storage for faster map loading and reduced lag</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>DDoS Protection</h3>
+                <p>Enterprise-grade protection against attacks and exploits</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>Global Locations</h3>
+                <p>Servers worldwide for optimal ping and performance</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>Instant Setup</h3>
+                <p>Your server is ready within seconds of payment</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>99.9% Uptime</h3>
+                <p>Reliable infrastructure with guaranteed uptime</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🛠️</div>
+                <h3>Full Control</h3>
+                <p>Full FTP access and server control panel</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="support">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Game Hosting</h3>
+                <ul>
+                    <li><a href="#">FiveM Hosting</a></li>
+                    <li><a href="#">Minecraft Hosting</a></li>
+                    <li><a href="#">MTA/SAMP Hosting</a></li>
+                    <li><a href="#">Rust Hosting</a></li>
+                    <li><a href="#">TeamSpeak3 Hosting</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Data Centers</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Knowledgebase</a></li>
+                    <li><a href="#">Support Tickets</a></li>
+                    <li><a href="#">Live Chat</a></li>
+                    <li><a href="https://discord.gg/CFYb6vqW" target="_blank">Discord Server</a></li>
+
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: alphaclodsolution@gmail.com</li>
+                    <li>Phone: +94 70 428 2970</li>
+                    <li>24/7 Support Available</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2025 Alphaclod Hosting Solutions. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>
